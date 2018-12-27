@@ -1,7 +1,7 @@
 ## 一、使用
 * api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
-## 二、包含依赖
 
+## 二、包含依赖
 * design库（包含v4，v7，v7-recyclerview，无cardview）
 
   "design"               : "com.android.support:design:$version.supportVersion",
@@ -11,15 +11,21 @@
 * fragment页面框架库
 
   "navigation-ui"        : "android.arch.navigation:navigation-ui-ktx:$version.naviVersion",
+
   "navigation-fragment"  : "android.arch.navigation:navigation-fragment-ktx:$version.naviVersion",
-* "lifecycle-extensions" : "android.arch.lifecycle:extensions:$version.archVersion",
+
+* lifecycle
+
+  "lifecycle-extensions" : "android.arch.lifecycle:extensions:$version.archVersion",
 * kotlin https://kotlinlang.org/docs/reference/
 
   "kotlin"               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version.kotlinVersion",
+
   "kotlin-reflect"       : "org.jetbrains.kotlin:kotlin-reflect:$version.kotlinVersion",
 * 数据库（支持livedata）
 
   "room-runtime"         : "android.arch.persistence.room:runtime:$version.archVersion",
+
   "room-compiler"        : "android.arch.persistence.room:compiler:$version.archVersion",
 * 分包库
 
@@ -48,16 +54,24 @@
 * 网路库 https://github.com/jeasonlzy/okhttp-OkGo
 
   "okgo"                 : "com.lzy.net:okgo:3.0.4",
+
   "okGoDown"             : "com.lzy.net:okserver:2.0.5",
 * 友盟 https://www.umeng.com/
 
   "umeng_common"         : "com.umeng.umsdk:common:1.5.4",
+
   "umeng_utdid"          : "com.umeng.umsdk:utdid:1.1.5.3",
+
   "umengshare_sdk"       : "com.umeng.umsdk:share-core:6.9.4",
+
   "umengshare_shareboard": "com.umeng.umsdk:share-board:6.9.4",
+
   "umengshare_qq"        : "com.umeng.umsdk:share-qq:6.9.4",
+
   "umengshare_wechat"    : "com.umeng.umsdk:share-wx:6.9.4",
+
   "umengshare_sina"      : "com.umeng.umsdk:share-sina:6.9.4",
+
   "umengpush_sdk"        : "com.umeng.umsdk:push:5.0.2",
 * 二维码
 
@@ -71,8 +85,10 @@
 * 网络、数据库抓包 http://facebook.github.io/stetho/  https://www.jianshu.com/p/03da9f91f41f
 
   "stetho"               : "com.facebook.stetho:stetho:latest.release",
+
   "stethoOkgo"           : "com.facebook.stetho:stetho-okhttp3:latest.release",
 * 内存泄漏 https://github.com/square/leakcanary 为防止debug干扰，没有强制集成，可自行添加
 
   "leakcanary-release"   : "com.squareup.leakcanary:leakcanary-android-no-op:latest.release",
+
   "leakcanary-debug"     : "com.squareup.leakcanary:leakcanary-android:latest.release",
