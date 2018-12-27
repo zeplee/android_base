@@ -64,9 +64,9 @@ class RouterHelper {
         fun gotoFrag(
             navController: NavController,
             @IdRes path: Int,
+            bundle: Bundle? = null,
             @AnimRes enterAnim: Int = mEnterAnim,
-            @AnimRes exitAnim: Int = mEnterAnim,
-            bundle: Bundle? = null
+            @AnimRes exitAnim: Int = mEnterAnim
         ) {
             navController.navigate(path, bundle, navOptions {
                 anim {
