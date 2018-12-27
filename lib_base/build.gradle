@@ -26,7 +26,7 @@ dependencies {
     api rootProject.ext.dependencies['constraint-layout']
     api rootProject.ext.dependencies['room-runtime']
     kapt rootProject.ext.dependencies['room-compiler']
-    implementation rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["multidex"]
 
     api rootProject.ext.dependencies['okgo']
     api rootProject.ext.dependencies['okGoDown']
@@ -40,10 +40,10 @@ dependencies {
     api rootProject.ext.dependencies["banner"]
     api rootProject.ext.dependencies["zxing"]
 
-    implementation rootProject.ext.dependencies["stetho"]
-    implementation rootProject.ext.dependencies["stethoOkgo"]
-    debugImplementation rootProject.ext.dependencies["leakcanary-debug"]
-    releaseImplementation rootProject.ext.dependencies["leakcanary-release"]
+    api rootProject.ext.dependencies["stetho"]
+    api rootProject.ext.dependencies["stethoOkgo"]
+    debugApi rootProject.ext.dependencies["leakcanary-debug"]
+    releaseApi rootProject.ext.dependencies["leakcanary-release"]
 
     api rootProject.ext.dependencies["bugly"]
     api rootProject.ext.dependencies["umeng_common"]
