@@ -2,7 +2,7 @@
 * api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
 ## 二、包含依赖
 * //design lib包含Support v4 ； AppCompat v7；v7包下的recyclerview，无cardview
-* "design"               : "com.android.support:design:$version.supportVersion",
+  "design"               : "com.android.support:design:$version.supportVersion",
 * "constraint-layout"    : "com.android.support.constraint:constraint-layout:1.1.3",
 * "navigation-ui"        : "android.arch.navigation:navigation-ui-ktx:$version.naviVersion",
 * "navigation-fragment"  : "android.arch.navigation:navigation-fragment-ktx:$version.naviVersion",
