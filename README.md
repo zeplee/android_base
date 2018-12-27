@@ -3,6 +3,7 @@
 ## 二、包含依赖
 
 * design库（包含v4，v7，v7-recyclerview，无cardview）
+
   "design"               : "com.android.support:design:$version.supportVersion",
 * 约束性布局
 
