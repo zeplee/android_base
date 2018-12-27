@@ -13,7 +13,7 @@ class PageLoadDlg(private val mContext: Context, private val Tag: String = "") {
 
     companion object {
         lateinit var mImgRes: Any
-        fun initPageLoadStyle(imgRes: Any) {
+        fun init(imgRes: Any) {
             mImgRes = imgRes
         }
     }
@@ -26,13 +26,13 @@ class PageLoadDlg(private val mContext: Context, private val Tag: String = "") {
 
     private fun initView() {
         mDlg = CommonDlg.Builder<PageLoadingBinding, EmptyVM>(mContext)
-                .setStyle(R.style.loading_dialog)
-                .setLayout(R.layout.page_loading)
-                .setViewModel(EmptyVM::class.java)
-                .setCanTouchout(false)
-                .setCanBack(true)
-                .setGravity(Gravity.CENTER)
-                .build()
+            .setStyle(R.style.loading_dialog)
+            .setLayout(R.layout.page_loading)
+            .setViewModel(EmptyVM::class.java)
+            .setCanTouchout(false)
+            .setCanBack(true)
+            .setGravity(Gravity.CENTER)
+            .build()
 //        app:imgRes="@{@drawable/loading}"
         ImageHelper.loadImg(mDlg.mBinding.gif1, mImgRes)
     }
