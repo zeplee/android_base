@@ -1,3 +1,4 @@
+[![](https://img.shields.io/dub/v/:packageName.svg)](https://jitpack.io/#Li-Zepeng/android_aac_lib)
 ## 一、用途
 * 学习了github上多个mvvm框架后，去粗取精，全部使用当前日期最新的依赖库，对recyclerview，viewpageradater等进行了封装，一个类轻松实现多类型条目
 * 本架构使用了google的aac架构，并且全部采用kotlin语言开发，填了很多kotlin+mvvm的坑，
