@@ -42,8 +42,6 @@ dependencies {
 
     api rootProject.ext.dependencies["stetho"]
     api rootProject.ext.dependencies["stethoOkgo"]
-    debugApi rootProject.ext.dependencies["leakcanary-debug"]
-    releaseApi rootProject.ext.dependencies["leakcanary-release"]
 
     api rootProject.ext.dependencies["bugly"]
     api rootProject.ext.dependencies["umeng_common"]

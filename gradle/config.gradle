@@ -61,8 +61,5 @@ ext {
             //网络、数据库抓包 http://facebook.github.io/stetho/    https://www.jianshu.com/p/03da9f91f41f
             "stetho"               : "com.facebook.stetho:stetho:latest.release",
             "stethoOkgo"           : "com.facebook.stetho:stetho-okhttp3:latest.release",
-            //内存泄漏 https://github.com/square/leakcanary
-            "leakcanary-release"   : "com.squareup.leakcanary:leakcanary-android-no-op:latest.release",
-            "leakcanary-debug"     : "com.squareup.leakcanary:leakcanary-android:latest.release",
     ]
 }

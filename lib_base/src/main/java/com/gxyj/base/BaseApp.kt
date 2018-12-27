@@ -6,10 +6,8 @@ import android.support.multidex.MultiDex
 import android.webkit.WebView
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.Utils
-import com.gxyj.base.helper.LeakHelper
 import com.gxyj.base.helper.RouterHelper
 import com.gxyj.base.helper.network.NetRequestHelper
-import com.gxyj.base.helper.urlmanager.UrlManager
 
 open class BaseApp : Application() {
 
@@ -27,6 +25,5 @@ open class BaseApp : Application() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(IS_DEBUG_MODE)
         }
-        LeakHelper.init(this)
     }
 }
