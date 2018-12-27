@@ -1,7 +1,13 @@
-## 一、使用
+## 一、用途
+* 项目中除了google的aac架构外，依赖了常用的umeng远程依赖，轮播，二维码，bug收集，okgo的封装，urls管理等本人精心封装好的组件
+
+  适合新项目直接依赖使用，老项目有依赖冲突可以远程下载去除多余依赖
+
+  使用这个库是为了多个项目使用同一基础组件，方便维护更新，提高开发效率
+## 二、使用
 * api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
 
-## 二、包含依赖
+## 三、包含依赖
 * design库（包含v4，v7，v7-recyclerview，无cardview）
 
   "design"               : "com.android.support:design:$version.supportVersion",
