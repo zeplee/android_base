@@ -1,16 +1,17 @@
-## api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
-## dependencies = [
+## 一、使用：api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
+
+## 二、包含依赖:
 *            //design lib包含Support v4 ； AppCompat v7；v7包下的recyclerview，无cardview
 *            "design"               : "com.android.support:design:$version.supportVersion",
 *            "constraint-layout"    : "com.android.support.constraint:constraint-layout:1.1.3",
 *            "navigation-ui"        : "android.arch.navigation:navigation-ui-ktx:$version.naviVersion",
 *            "navigation-fragment"  : "android.arch.navigation:navigation-fragment-ktx:$version.naviVersion",
 *            "lifecycle-extensions" : "android.arch.lifecycle:extensions:$version.archVersion",
-*//            "lifecycle-compiler"   : "android.arch.lifecycle:compiler:$version.archVersion",
+*            //"lifecycle-compiler"   : "android.arch.lifecycle:compiler:$version.archVersion",
 *            //https://kotlinlang.org/docs/reference/
 *            "kotlin"               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version.kotlinVersion",
 *            "kotlin-reflect"       : "org.jetbrains.kotlin:kotlin-reflect:$version.kotlinVersion",
-*//            "databinding-compiler" : "com.android.databinding:compiler:3.2.0-alpha10",
+*            //"databinding-compiler" : "com.android.databinding:compiler:3.2.0-alpha10",
 *            "room-runtime"         : "android.arch.persistence.room:runtime:$version.archVersion",
 *            "room-compiler"        : "android.arch.persistence.room:compiler:$version.archVersion",
 *            "multidex"             : "com.android.support:multidex:1.0.2",
@@ -18,7 +19,7 @@
 *            "statusbar"            : "com.gyf.immersionbar:immersionbar:2.3.2",
 *            //https://github.com/scwang90/SmartRefreshLayout
 *            "refreshLayout"        : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-18",
-*//            https://github.com/ittianyu/BottomNavigationViewEx
+*            //https://github.com/ittianyu/BottomNavigationViewEx
 *            "bottomNavigationView" : "com.github.ittianyu:BottomNavigationViewEx:2.0.2",
 *            //https://github.com/youth5201314/banner
 *            "banner"               : "com.youth.banner:banner:1.4.10",
@@ -26,9 +27,9 @@
 *            "gson"                 : "com.google.code.gson:gson:2.8.5",
 *            //https://github.com/alibaba/ARouter
 *            "arouter"              : "com.alibaba:arouter-api:1.4.1",
-*//            //https://github.com/bumptech/glide  http://m.blog.csdn.net/sinyu890807/article/details/78582548
+*            //https://github.com/bumptech/glide  http://m.blog.csdn.net/sinyu890807/article/details/78582548
 *            "glide"                : "com.github.bumptech.glide:glide:4.8.0",
-*//            //https://github.com/jeasonlzy/okhttp-OkGo
+*            //https://github.com/jeasonlzy/okhttp-OkGo
 *            "okgo"                 : "com.lzy.net:okgo:3.0.4",
 *            "okGoDown"             : "com.lzy.net:okserver:2.0.5",
 *            //友盟 https://www.umeng.com/
@@ -52,4 +53,3 @@
 *            //内存泄漏 https://github.com/square/leakcanary
 *            "leakcanary-release"   : "com.squareup.leakcanary:leakcanary-android-no-op:latest.release",
 *            "leakcanary-debug"     : "com.squareup.leakcanary:leakcanary-android:latest.release",
-*    ]
