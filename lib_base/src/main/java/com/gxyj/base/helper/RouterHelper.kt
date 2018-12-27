@@ -42,7 +42,7 @@ class RouterHelper {
         fun gotoAty(
             path: String,
             @AnimRes enterAnim: Int = mEnterAnim,
-            @AnimRes exitAnim: Int = mEnterAnim
+            @AnimRes exitAnim: Int = mExitAnim
         ): Postcard {
             return ARouter.getInstance().build(path)
                 .withTransition(enterAnim, exitAnim)
@@ -55,7 +55,7 @@ class RouterHelper {
         fun gotoAtySingleTask(
             path: String,
             @AnimRes enterAnim: Int = mEnterAnim,
-            @AnimRes exitAnim: Int = mEnterAnim
+            @AnimRes exitAnim: Int = mExitAnim
         ): Postcard {
             return gotoAty(path, enterAnim, exitAnim)
                 .withFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
@@ -66,7 +66,7 @@ class RouterHelper {
             @IdRes path: Int,
             bundle: Bundle? = null,
             @AnimRes enterAnim: Int = mEnterAnim,
-            @AnimRes exitAnim: Int = mEnterAnim
+            @AnimRes exitAnim: Int = mExitAnim
         ) {
             navController.navigate(path, bundle, navOptions {
                 anim {
