@@ -26,6 +26,7 @@ dependencies {
     api rootProject.ext.dependencies['constraint-layout']
     api rootProject.ext.dependencies['room-runtime']
     kapt rootProject.ext.dependencies['room-compiler']
+    api rootProject.ext.dependencies['paging-runtime']
     api rootProject.ext.dependencies["multidex"]
 
     api rootProject.ext.dependencies['okgo']

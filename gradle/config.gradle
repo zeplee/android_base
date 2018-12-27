@@ -25,6 +25,7 @@ ext {
 //            "databinding-compiler" : "com.android.databinding:compiler:3.2.0-alpha10",
             "room-runtime"         : "android.arch.persistence.room:runtime:$version.archVersion",
             "room-compiler"        : "android.arch.persistence.room:compiler:$version.archVersion",
+            "paging-runtime"       : "android.arch.paging:runtime:1.0.1",
             "multidex"             : "com.android.support:multidex:1.0.2",
             //https://github.com/gyf-dev/ImmersionBar
             "statusbar"            : "com.gyf.immersionbar:immersionbar:2.3.2",
