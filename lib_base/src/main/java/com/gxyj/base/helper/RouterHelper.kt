@@ -17,9 +17,9 @@ import com.gxyj.base.IS_DEBUG_MODE
 class RouterHelper {
     companion object {
         @AnimRes
-        var mEnterAnim: Int = android.R.anim.fade_in
+        var mEnterAnim: Int = 0
         @AnimRes
-        var mExitAnim: Int = android.R.anim.fade_out
+        var mExitAnim: Int = 0
 
         fun init(
             context: Application,
@@ -39,27 +39,41 @@ class RouterHelper {
         /**
          * 添加动画的话必须传入aty的context（v的context也是）,代表这个aty，不然默认是application，动画不生效
          */
-        fun gotoAty(path: String): Postcard {
+        fun gotoAty(
+            path: String,
+            @AnimRes enterAnim: Int = mEnterAnim,
+            @AnimRes exitAnim: Int = mEnterAnim
+        ): Postcard {
             return ARouter.getInstance().build(path)
-                .withTransition(mEnterAnim, mExitAnim)
+                .withTransition(enterAnim, exitAnim)
         }
 
         /**
          * 去单个实例的栈位置,并清除跳转之前的所有的栈
          * 参数通过onNewIntent接收
          */
-        fun gotoAtySingleTask(path: String): Postcard {
-            return gotoAty(path)
+        fun gotoAtySingleTask(
+            path: String,
+            @AnimRes enterAnim: Int = mEnterAnim,
+            @AnimRes exitAnim: Int = mEnterAnim
+        ): Postcard {
+            return gotoAty(path, enterAnim, exitAnim)
                 .withFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
         }
 
-        fun gotoFrag(navController: NavController, @IdRes path: Int, bundle: Bundle? = null) {
+        fun gotoFrag(
+            navController: NavController,
+            @IdRes path: Int,
+            @AnimRes enterAnim: Int = mEnterAnim,
+            @AnimRes exitAnim: Int = mEnterAnim,
+            bundle: Bundle? = null
+        ) {
             navController.navigate(path, bundle, navOptions {
                 anim {
-                    enter = mEnterAnim
-                    exit = mExitAnim
-                    popEnter = mEnterAnim
-                    popExit = mExitAnim
+                    enter = enterAnim
+                    exit = exitAnim
+                    popEnter = enterAnim
+                    popExit = exitAnim
                 }
             })
         }
@@ -67,6 +81,7 @@ class RouterHelper {
         /**
          * 去单个实例的栈位置,并清除跳转之前的所有的栈
          * 如果要传参数通过aty的vm共享
+         * 自动使用了去的时候的动画
          */
         fun gotoFragSingleTask(navController: NavController, @IdRes path: Int) {
             navController.popBackStack(path, false)
