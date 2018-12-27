@@ -6,7 +6,6 @@ import android.support.multidex.MultiDex
 import android.webkit.WebView
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.Utils
-import com.gxyj.base.helper.RouterHelper
 import com.gxyj.base.helper.network.NetRequestHelper
 
 open class BaseApp : Application() {
