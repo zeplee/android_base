@@ -21,7 +21,6 @@ open class BaseApp : Application() {
         Utils.init(this)
         LogUtils.getConfig().setLogSwitch(IS_DEBUG_MODE)
         NetRequestHelper.init(this)
-        RouterHelper.init(this)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(IS_DEBUG_MODE)
         }

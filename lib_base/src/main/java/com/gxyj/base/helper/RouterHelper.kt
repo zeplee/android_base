@@ -16,7 +16,18 @@ import com.gxyj.base.IS_DEBUG_MODE
  */
 class RouterHelper {
     companion object {
-        fun init(context: Application) {
+        @AnimRes
+        var mEnterAnim: Int = android.R.anim.fade_in
+        @AnimRes
+        var mExitAnim: Int = android.R.anim.fade_out
+
+        fun init(
+            context: Application,
+            @AnimRes enterAnim: Int,
+            @AnimRes exitAnim: Int
+        ) {
+            mEnterAnim = enterAnim
+            mExitAnim = exitAnim
             ARouter.init(context)
             if (IS_DEBUG_MODE) {
                 ARouter.openLog()
@@ -28,32 +39,27 @@ class RouterHelper {
         /**
          * 添加动画的话必须传入aty的context（v的context也是）,代表这个aty，不然默认是application，动画不生效
          */
-        fun gotoAty(path: String,
-                    @AnimRes enterAnim: Int = android.R.anim.fade_in,
-                    @AnimRes exitAnim: Int = android.R.anim.fade_out): Postcard {
+        fun gotoAty(path: String): Postcard {
             return ARouter.getInstance().build(path)
-                    .withTransition(enterAnim, exitAnim)
+                .withTransition(mEnterAnim, mExitAnim)
         }
 
         /**
          * 去单个实例的栈位置,并清除跳转之前的所有的栈
          * 参数通过onNewIntent接收
          */
-        fun gotoAtySingleTask(path: String,
-                              @AnimRes enterAnim: Int = android.R.anim.fade_in,
-                              @AnimRes exitAnim: Int = android.R.anim.fade_out): Postcard {
-            return ARouter.getInstance().build(path)
-                    .withTransition(enterAnim, exitAnim)
-                    .withFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        fun gotoAtySingleTask(path: String): Postcard {
+            return gotoAty(path)
+                .withFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
         }
 
         fun gotoFrag(navController: NavController, @IdRes path: Int, bundle: Bundle? = null) {
             navController.navigate(path, bundle, navOptions {
                 anim {
-                    enter = android.R.anim.fade_in
-                    exit = android.R.anim.fade_out
-                    popEnter = android.R.anim.fade_in
-                    popExit = android.R.anim.fade_out
+                    enter = mEnterAnim
+                    exit = mExitAnim
+                    popEnter = mEnterAnim
+                    popExit = mExitAnim
                 }
             })
         }
