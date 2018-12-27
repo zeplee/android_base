@@ -1,5 +1,5 @@
-##api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
-* dependencies = [
+## api 'com.github.Li-Zepeng:android_aac_lib:v0.1.0'
+## dependencies = [
 *            //design lib包含Support v4 ； AppCompat v7；v7包下的recyclerview，无cardview
 *            "design"               : "com.android.support:design:$version.supportVersion",
 *            "constraint-layout"    : "com.android.support.constraint:constraint-layout:1.1.3",
