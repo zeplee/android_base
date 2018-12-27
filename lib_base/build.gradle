@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        dataBinding { enabled = true }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dependencies['kotlin']
+    api rootProject.ext.dependencies["kotlin-reflect"]
+//    kapt rootProject.ext.dependencies['databinding-compiler']
+    api rootProject.ext.dependencies['design']
+    api rootProject.ext.dependencies['navigation-ui']
+    api rootProject.ext.dependencies['navigation-fragment']
+    api rootProject.ext.dependencies['lifecycle-extensions']
+//    kapt rootProject.ext.dependencies['lifecycle-compiler']
+    api rootProject.ext.dependencies['constraint-layout']
+    api rootProject.ext.dependencies['room-runtime']
+    kapt rootProject.ext.dependencies['room-compiler']
+    implementation rootProject.ext.dependencies["multidex"]
+
+    api rootProject.ext.dependencies['okgo']
+    api rootProject.ext.dependencies['okGoDown']
+    api rootProject.ext.dependencies['utilcode']
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["arouter"]
+    api rootProject.ext.dependencies['statusbar']
+    api rootProject.ext.dependencies['bottomNavigationView']
+    api rootProject.ext.dependencies["refreshLayout"]
+    api rootProject.ext.dependencies["banner"]
+    api rootProject.ext.dependencies["zxing"]
+
+    implementation rootProject.ext.dependencies["stetho"]
+    implementation rootProject.ext.dependencies["stethoOkgo"]
+    debugImplementation rootProject.ext.dependencies["leakcanary-debug"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-release"]
+
+    api rootProject.ext.dependencies["bugly"]
+    api rootProject.ext.dependencies["umeng_common"]
+    api rootProject.ext.dependencies["umeng_utdid"]
+    api rootProject.ext.dependencies["umengshare_sdk"]
+    api rootProject.ext.dependencies["umengshare_shareboard"]
+    api rootProject.ext.dependencies["umengshare_qq"]
+    api rootProject.ext.dependencies["umengshare_wechat"]
+    api rootProject.ext.dependencies["umengshare_sina"]
+    api rootProject.ext.dependencies["umengpush_sdk"]
+}

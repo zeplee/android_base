@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gxyj.base">
+
+    <application android:allowBackup="false">
+        <!-- 兼容Android N或者以上设备，配置FileProvider来访问共享路径的文件 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/app_provider_paths" />
+        </provider>
+    </application>
+</manifest>

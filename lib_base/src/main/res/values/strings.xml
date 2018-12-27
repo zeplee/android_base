@@ -1,0 +1,4 @@
+<resources>
+    <string name="regexLetterAndNumber">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="regexHttp">https://.0123456789abcdefghijklmnopqrstuvwxyz</string>
+</resources>

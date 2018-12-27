@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <shape>
+            <!-- 点击前的背景色-->
+            <solid android:color="@android:color/white" />
+            <stroke android:width="0.2dp" android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+    <item android:drawable="@android:color/holo_orange_light" android:state_checked="true" />
+</selector>

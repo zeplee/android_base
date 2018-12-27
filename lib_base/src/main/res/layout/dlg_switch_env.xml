@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="switchEnvDlgVM"
+            type="com.gxyj.base.helper.urlmanager.widget.vm.SwitchEnvDlgVM" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/device_token"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:editable="false"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@{switchEnvDlgVM.deviceToken}"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="8dp"
+            android:text="@{switchEnvDlgVM.version}"
+            android:textColor="@android:color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/device_token" />
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="#eeeeee"
+            app:layout_constraintTop_toBottomOf="@+id/version" />
+
+        <EditText
+            android:id="@+id/env_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:digits="@string/regexHttp"
+            android:ellipsize="end"
+            android:hint="@{switchEnvDlgVM.inputHint}"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="@={switchEnvDlgVM.MLiveInputText}"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/env_ok"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <TextView
+            android:id="@+id/env_ok"
+            android:layout_width="65dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:onClick="@{()->switchEnvDlgVM.okOnclickListener()}"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:visibility="@{switchEnvDlgVM.isOkVisible?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/env_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/env_input" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="#eeeeee"
+            app:layout_constraintTop_toBottomOf="@+id/env_input" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_env"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adapter="@{switchEnvDlgVM.MAdapter}"
+            android:background="#eeeeee"
+            android:paddingBottom="30dp"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            app:spanCount="4" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
