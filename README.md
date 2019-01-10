@@ -1,11 +1,11 @@
 ## 一、用途
-* 学习了github上多个mvvm框架后，去粗取精，全部使用当前日期最新的依赖库，对recyclerview，viewpageradater等进行了封装，一个类轻松实现多类型条目
-* 本架构使用了google的aac架构，并且全部采用kotlin语言开发，填了很多kotlin+mvvm的坑，
-* 没有使用rxjava（google自带的viewmodel完全可以替代此组件），anko等太激进的写法，适合公司项目稳定使用，便于java到kotlin的过度
-* 适合新项目直接依赖使用，老项目有依赖冲突可以下载去除多余依赖
+* 学习多个mvvm框架后，去粗取精，全部使用当前日期最新的依赖库，对recyclerview.adapter，viewpagerAdater等进行了封装，一个类轻松实现多类型条目
+* 本架构使用了google的AAC架构，基本采用kotlin语言开发，填了很多kotlin+mvvm的坑
+* 没有使用rxjava（google自带的viewmodel完全可以替代此组件），anko等太激进的写法，适合公司项目稳定使用，便于java到kotlin的过渡
+* 适合新项目直接依赖使用，老项目有依赖冲突可以下载去除多余依赖，其中common文件夹可以删除，为旧项目文件，因本人目前还有需要，暂时没有删除
 * 使用这个库是为了多个项目使用同一基础组件，方便维护更新，提高开发效率
 * demo还没有写好，还有一些业务层的封装经验，暂时没有上传
-* 注意：目前依赖了常用的umeng，轮播，二维码，bug收集，okgo的封装，urls管理等本人精心封装好的组件，可能有人会用不到
+* 注意：目前因本人需要，依赖了常用的umeng，轮播，二维码，bug收集，okgo的封装，urls管理等本人精心封装好的组件，用不到的可以下载删除，替换
 ## 二、使用(version自行选择release中的最新版本)
 * api 'com.github.Li-Zepeng:android_aac_lib:version'
 
