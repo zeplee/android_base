@@ -30,7 +30,7 @@ ext {
             //https://github.com/gyf-dev/ImmersionBar
             "statusbar"            : "com.gyf.immersionbar:immersionbar:2.3.2",
             //https://github.com/scwang90/SmartRefreshLayout
-            "refreshLayout"        : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-18",
+            "refreshLayout"        : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-19",
 //            https://github.com/ittianyu/BottomNavigationViewEx
             "bottomNavigationView" : "com.github.ittianyu:BottomNavigationViewEx:2.0.2",
             //https://github.com/youth5201314/banner
@@ -56,7 +56,7 @@ ext {
             //二维码
             "zxing"                : "com.google.zxing:core:3.3.0",
             //https://github.com/Blankj/AndroidUtilCode
-            "utilcode"             : "com.blankj:utilcode:1.22.7",
+            "utilcode"             : "com.blankj:utilcode:1.23.0",
             //https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=20180521124306
             "bugly"                : "com.tencent.bugly:crashreport:latest.release",
             //网络、数据库抓包 http://facebook.github.io/stetho/    https://www.jianshu.com/p/03da9f91f41f
