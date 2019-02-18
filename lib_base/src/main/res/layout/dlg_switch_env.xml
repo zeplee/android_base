@@ -8,7 +8,7 @@
 
         <variable
             name="switchEnvDlgVM"
-            type="com.gxyj.base.helper.urlmanager.widget.vm.SwitchEnvDlgVM" />
+            type="com.aac.base.helper.urlmanager.widget.vm.SwitchEnvDlgVM" />
     </data>
 
     <android.support.constraint.ConstraintLayout

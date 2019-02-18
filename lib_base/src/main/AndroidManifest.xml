@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gxyj.base">
+    package="com.aac.base">
 
     <application android:allowBackup="false">
         <!-- 兼容Android N或者以上设备，配置FileProvider来访问共享路径的文件 -->
